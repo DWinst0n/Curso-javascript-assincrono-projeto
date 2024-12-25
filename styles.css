@@ -26,6 +26,11 @@ body {
     font-family: var(--fonte-primaria);
     color: var(--offwhite);
 }
+img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
 .container__principal {
     max-width: 62.25rem;
@@ -38,8 +43,14 @@ body {
     background: var(--cinza-escuro);
     gap: 2rem;
     margin: 10% auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 2s ease;
 }
-
+.container__principal.aparecer{
+    opacity: 1;
+    transform: translateY(0);
+}
 .login__titulo, .login__boas-vindas {
     font-family: var(--fonte-primaria);
 }
@@ -64,6 +75,7 @@ body {
 
 .imagem__login {
     width: 45%;
+    pointer-events: none;
 }
 
 .login__container {
@@ -88,15 +100,18 @@ body {
 }
 
 .inserir__dados__usuario {
-    padding: 0.5rem 0;
-    width: 100%;
+    padding: 0.5rem 1.5em;
+    width: calc(100% - 3em);
     border-radius: 0.25rem;
     background: var(--cinza-medio);
     color: var(--cinza-escuro);
     font-size: 0.9375rem;
     line-height: 1.5;
+    transition: border 0.5s, color 0.5s;
 }
-
+.inserir__dados__usuario:hover, .inserir__dados__usuario:focus {
+    border: 2px solid var(--cor-destaque);
+}
 .acoes__login {
     display: flex;
     justify-content: space-between;
@@ -121,8 +136,16 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 150%; 
+    transition: background-color 0.5s, border 0.3s, color 0.3s;
 }
-
+.botao__login:hover {
+    background-color: var(--cor-destaque2);
+}
+.botao__login:active{
+    background-color: transparent;
+    border: 1px solid var(--cor-destaque2);
+    color: var(--cor-destaque);
+}
 .esqueceu__senha {
     color: var(--offwhite);
     font-size: 0.9375rem;
@@ -173,11 +196,11 @@ hr {
 .conta__icone {
     width: 32px;
     height: 32px;
+    transition: transform 0.5s ease;
 
 }
 .conta__icone:hover {
-    width: 40px;
-    height: 40px;
+    transform: scale(1.2);
 }
 .conta__texto {
     color: var(--offwhite);
