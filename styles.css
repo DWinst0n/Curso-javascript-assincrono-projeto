@@ -27,6 +27,7 @@ body {
     color: var(--offwhite);
 }
 img {
+    pointer-events: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     user-select: none;
@@ -42,26 +43,26 @@ img {
     border-radius: 2rem;
     background: var(--cinza-escuro);
     gap: 2rem;
-    margin: 10% auto;
+    margin: 2.5% auto;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 1s ease, transform 2s ease;
+    transition: opacity 2.5s ease, transform 3s ease;
 }
 .container__principal.aparecer{
     opacity: 1;
     transform: translateY(0);
 }
-.login__titulo, .login__boas-vindas {
+.login__titulo, .login__boas-vindas, .cadastro__titulo, .cadastro__boas-vindas{
     font-family: var(--fonte-primaria);
 }
 
-.login__titulo {
+.login__titulo, .cadastro__titulo {
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.5;
 }
 
-.login__boas-vindas {
+.login__boas-vindas, .cadastro__boas-vindas {
     font-size: 1.375rem;
     font-weight: 400;
     line-height: 1.5;
@@ -72,13 +73,15 @@ img {
     flex-direction: column;
     text-align: center;
 }
-
-.imagem__login {
+.imagem__login2,.imagem__cadastro2 {
+    display: none;
     width: 45%;
-    pointer-events: none;
+}
+.imagem__login, .imagem__cadastro {
+    width: 45%;
 }
 
-.login__container {
+.login__container, .cadastro__container {
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -87,7 +90,7 @@ img {
     padding: 0 2rem;
 }
 
-.login__preencher {
+.login__preencher, .cadastro__preencher {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -99,7 +102,7 @@ img {
     line-height: 1.5;
 }
 
-.inserir__dados__usuario {
+.inserir__dados__usuario, .criar__dados__usuario {
     padding: 0.5rem 1.5em;
     width: calc(100% - 3em);
     border-radius: 0.25rem;
@@ -109,10 +112,10 @@ img {
     line-height: 1.5;
     transition: border 0.5s, color 0.5s;
 }
-.inserir__dados__usuario:hover, .inserir__dados__usuario:focus {
+.inserir__dados__usuario:hover, .inserir__dados__usuario:focus, .criar__dados__usuario:hover, .criar__dados__usuario:focus {
     border: 2px solid var(--cor-destaque);
 }
-.acoes__login {
+.acoes__login, .acoes__cadastro {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,7 +128,7 @@ img {
     gap: 0.25rem;
 }
 
-.botao__login {
+.botao__login, .botao__cadastro  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,10 +141,10 @@ img {
     line-height: 150%; 
     transition: background-color 0.5s, border 0.3s, color 0.3s;
 }
-.botao__login:hover {
+.botao__login:hover, .botao__cadastro:hover {
     background-color: var(--cor-destaque2);
 }
-.botao__login:active{
+.botao__login:active, .botao__cadastro:active {
     background-color: transparent;
     border: 1px solid var(--cor-destaque2);
     color: var(--cor-destaque);
@@ -182,7 +185,6 @@ hr {
 .simbolo__cima, .simbolo__baixo {
     position: fixed;
     z-index: -1;
-    pointer-events: none;
     width: 20%;
 }
 .outras__contas__container {
@@ -196,6 +198,7 @@ hr {
 .conta__icone {
     width: 32px;
     height: 32px;
+    pointer-events: all;
     transition: transform 0.5s ease;
 
 }
@@ -213,11 +216,17 @@ hr {
     align-items: center;
     gap: 0.5em;
 }
+.entrar__na__conta__container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    align-items: center;
+}
 .conta__booleano {
     font-size: 0.9375rem;
     line-height: 150%;
 }
-.criar__conta__link {
+.conta__link {
     color: var(--cor-destaque);
     display: flex;
     gap: 0.75em;
@@ -236,7 +245,7 @@ hr {
     right: 5%;
 }
 @media (max-width: 1431px) {
-    .login__container {
+    .login__container, .cadastro__container {
         gap: 1.5rem;
         padding: 0;
     }
@@ -251,6 +260,19 @@ hr {
     .container__principal {
         flex-direction: column;
     }
+    .imagem__login, .imagem__cadastro{
+        display: none;
+    }
+    .imagem__login2, .imagem__cadastro2 {
+        display: block;
+    }
+    .simbolo__cima {
+        left: 0%;
+    }
+    
+    .simbolo__baixo {
+        right: 0%;
+    }
 }
 @media (max-width: 626px) {
     .container__principal {
@@ -258,9 +280,18 @@ hr {
         padding: 1.5rem 2rem;
     }
 }
-@media (max-width: 626px) {
+@media (max-width: 426px) {
     .container__principal {
         width: 80%;
         padding: 1.5rem 0.75rem;
+    }
+    .imagem__login, .imagem__cadastro {
+        display: block;
+    }
+    .imagem__login2, .imagem__cadastro2 {
+        display: none;
+    }
+    .entrar__na__conta__container {
+        flex-direction: column;
     }
 }

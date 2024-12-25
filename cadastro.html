@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CodeConnect</title>
+</head>
+<body>
+    <img src="/img/smbolo.png"class="simbolo__cima">
+    <main class="container__principal">
+        <img src="/img/imagemCadastro.png" alt="Imagem de uma programadora usuária do CodeConnect" class="imagem__cadastro">
+        <img src="/img/imagemcadastro2.png" alt="Imagem de uma programadora usuária do CodeConnect" class="imagem__cadastro2">
+        <section class="cadastro__container">
+            <h1 class="cadastro__titulo">Cadastro</h1>
+            <h2 class="cadastro__boas-vindas">Olá! Preencha seus dados.</h2>
+            <form class="cadastro__preencher">
+                <div class="campo__cadastro email__usuario">
+                    <p class="usuario__texto">Nome</p>
+                    <input id="inserirUsuario" class="criar__dados__usuario">
+                </div>
+                <div class="campo__cadastro email__usuario">
+                    <p class="email__texto">Email</p>
+                    <input id="inserirEmail" class="criar__dados__usuario">
+                </div>
+                <div class="campo__cadastro senha__usuario">
+                    <p class="senha__texto">Senha</p>
+                    <input id="CriarSenha" class="criar__dados__usuario" type="password">
+                </div>
+                <div class="acoes__cadastro">
+                    <label for="lembrarSenha" class="lembrar">
+                        <input type="checkbox" id="lembrarSenha"><p class="lembrar">Lembrar-me</p>
+                    </label>
+                </div>
+                <button id="fazerCadastro" class="botao__cadastro"> Cadastrar <i class="material-icons" style="
+                color: var(--verde-petroleo);
+                font-size: 1.125rem;
+                font-size: 1.125rem;
+                font-weight: 600;
+                line-height: 150%;">arrow_forward</i></button>
+            </form>
+            <div class="outras__contas__texto__container"> <hr> <p class="outras__contas__texto">Ou entre com outras contas</p> <hr> </div>
+            <div class="outras__contas__container">
+                <button class="conta"><img src="/img/contaGithub.svg" alt="Entrar pelo Github" class="conta__icone"><p class="conta__texto">Github</p></button>
+                <button class="conta"><img src="/img/contaGoogle.svg" alt="Entrar na conta Google" class="conta__icone"><p class="conta__texto">Gmail</p></button>
+            </div>
+            <div class="entrar__na__conta__container">
+                <span class="conta__booleano">Já tem conta?</span> <a href="http://127.0.0.1:3000/index.html" class="conta__link">Faça seu login!<img src="/img/login.svg" alt="Fazer login"></a>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <span class="autor">
+            <span class="rodape__texto">Desenvolvido por Davi Winston, estudante Alura.</span>
+            <span class="rodape__texto">Projeto fictício sem fins comerciais.</span>
+        </span>
+    </footer>
+    <img src="/img/smbolo.png"class="simbolo__baixo">
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
