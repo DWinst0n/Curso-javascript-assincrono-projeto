@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/entrarOuCriar.css">
     <title>CodeConnect</title>
 </head>
 <body>
@@ -21,25 +21,25 @@
             <h2 class="login__boas-vindas">Boas-vindas! Faça seu login.</h2>
             <form class="login__preencher">
                 <div class="campo__login email__usuario">
-                    <p class="usuario__texto">Email ou usuário</p>
+                    <label for="inserirUsuario" class="usuario__texto">Email ou usuário</label>
                     <input id="inserirUsuario" class="inserir__dados__usuario">
                 </div>
                 <div class="campo__login senha__usuario">
-                    <p class="senha__texto">Senha</p>
+                    <label for="inserirSenha" class="senha__texto">Senha</label>
                     <input id="inserirSenha" class="inserir__dados__usuario" type="password">
                 </div>
                 <div class="acoes__login">
                     <label for="lembrarSenha" class="lembrar">
                         <input type="checkbox" id="lembrarSenha"><p class="lembrar">Lembrar-me</p>
                     </label>
-                    <a href="#" class="esqueceu__senha">Esqueci a senha</a>
+                    <a href="/html/cadastro.html" class="esqueceu__senha">Esqueci a senha</a>
                 </div>
-                <button id="fazerLogin" class="botao__login">Login <i class="material-icons" style="
+                <a href="/html/feed.html" id="fazerLogin" class="botao__login">Login <i class="material-icons" style="
                 color: var(--verde-petroleo);
                 font-size: 1.125rem;
                 font-size: 1.125rem;
                 font-weight: 600;
-                line-height: 150%;">arrow_forward</i></button>
+                line-height: 150%;">arrow_forward</i></a>
             </form>
             <div class="outras__contas__texto__container"> <hr> <p class="outras__contas__texto">Ou entre com outras contas</p> <hr> </div>
             <div class="outras__contas__container">
@@ -48,7 +48,7 @@
             </div>
             <div class="criar__conta__container">
                 <span class="conta__booleano">Ainda não tem conta?</span>
-                <a href="http://127.0.0.1:3000/cadastro.html" class="conta__link">Crie seu cadastro! <img src="/img/assignment.svg" alt="Fazer cadastro"></a>
+                <a href="/html/cadastro.html" class="conta__link">Crie seu cadastro! <img src="/img/assignment.svg" alt="Fazer cadastro"></a>
             </div>
         </section>
     </main>
