@@ -45,6 +45,9 @@ a {
 ul {
     list-style-type: none;
 }
+header {
+    display: none;
+}
 .menu__lateral {
     display: flex;
     max-width: 11.0625rem;
@@ -91,4 +94,65 @@ ul {
     color: var(--cinza-medio);
     font-size: 1.375rem;
     line-height: 150%;
+}
+.invisivel {
+    display: none;
+}
+
+@media screen and (max-width: 770px ) {
+    header {
+        display: block;
+    }
+    body {
+        justify-content: flex-start;
+    }
+    .desktop {
+        display: none;
+    }
+    .cabecalho {
+        display: flex;
+        margin: 6% 8%;
+        justify-content: space-between;
+        align-self: stretch;
+    }
+    .menu__lateral {
+        position: fixed;
+        width: 100vw;
+        bottom: 0;
+        gap: 0;
+        margin: 0;
+        flex-direction: row;
+        height: auto;
+        padding: 2.5rem 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .lista__links {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+        gap: 10%
+    }
+}
+@media screen and (max-width: 375px) {
+    .menu__link {
+    font-size: 1.075rem;
+    }
+    .lista__links {
+        gap: 5%;
+    }
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    .logo {
+        max-width: 8rem;
+    }
+    .botao__publicar {
+        text-align: center;
+        max-width: 9rem;
+        justify-content: center;
+    }
 }
