@@ -71,10 +71,6 @@ body {
     color: var(--cinza-escuro);
     font-size: 0.9375rem;
     line-height: 1.5;
-    transition: border 0.5s, color 0.5s;
-}
-.inserir__dados__usuario:hover, .inserir__dados__usuario:focus, .criar__dados__usuario:hover, .criar__dados__usuario:focus {
-    border: 2px solid var(--cor-destaque);
 }
 .acoes__login, .acoes__cadastro {
     display: flex;
@@ -153,8 +149,6 @@ body {
     width: 32px;
     height: 32px;
     pointer-events: all;
-    transition: transform 0.5s ease;
-
 }
 .conta__icone:hover {
     transform: scale(1.2);

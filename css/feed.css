@@ -1,1 +1,31 @@
 @import url(styles.css);
+body {
+    height: auto;
+    align-items: flex-start;
+}
+.menu__flutuante {
+    margin-top: 5%;
+}
+.container__principal {
+    margin-top: 5%;
+}
+.publicados__filtro {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* .publicados__posts {
+
+} */
+ .posts__lista {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap:1.5rem;
+ }
+
+ .foto__post__container {
+    background-color: var(--cinza-medio);
+    padding: 1.5rem;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+ }

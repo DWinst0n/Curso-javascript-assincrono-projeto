@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="/css/publicar.css">
 </head>
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho mobile">
         <img src="/img/Logo.svg" alt="Logo" class="logo">
         <a href="/html/publicar.html" class="botao__publicar">Publicar</a>
     </header>
+    
     <aside class="menu__flutuante">
         <div class="desktop">
             <img src="/img/Logo.svg" alt="Logo" class="Logo desktop">
@@ -33,12 +34,36 @@
         </nav>
     </aside>
     <main class="container__principal">
-        <section class="carregar__projeto__container">
-            <div class="foto__projeto__container">
-                <img src="/img/imagem1.png" alt="imagem do Projeto" class="imagem__projeto" id="imagemProjeto">
-            </div>
-            <button class="carregar__projeto__botao">Carregar imagem <img src="/img/upload.svg" alt=""></button>
-            <span class="projeto__arquivo">image_projeto.png <img src="/img/close.svg"></span>
+        <section class="barra__pesquisa mobile">
+            <form class="form__pesquisa">
+                <input type="search" placeholder="Digite o que você procura" class="input__pesquisa">
+                <div class="pesquisa__tags__container">
+                    <ul class="pesquisa__lista__tags">
+                        <li class="lista__tags__item">
+                            <img src="/img/close-black.svg">
+                            <p class="nome__tag">Front-end</p>
+                        </li>
+                        <li class="lista__tags__item">
+                            <img src="/img/close-black.svg">
+                            <p class="nome__tag">React</p>
+                        </li>
+                        <li class="lista__tags__item">
+                            <img src="/img/close-black.svg">
+                            <p class="nome__tag">Acessibilidade</p>
+                        </li> 
+                    </ul>
+                    <button class="limpar__tags__botao" id="limparTags">Limpar tudo</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <form  class="carregar__projeto__container">
+                <div class="foto__projeto__container">
+                    <img src="/img/imagem1.png" alt="imagem do Projeto" class="imagem__projeto" id="imagemProjeto">
+                </div>
+                <button class="carregar__projeto__botao">Carregar imagem <img src="/img/upload.svg" alt=""></button>
+                <span class="projeto__arquivo">image_projeto.png <img src="/img/close.svg"></span>
+            </form>
         </section>
 
         <section class="info__projeto">
@@ -57,11 +82,17 @@
                     <input type="text" id="categoria" class ="inserir__info__projeto descricao__projeto" name="tags">
                 </div>
                 <ul class="lista__tags">
-                    <li>
-                        <div class="lista__tags__item">
-                            <img src="/img/close-black.svg">
-                            <p class="nome__tag">Front-end</p>
-                        </div>
+                    <li class="lista__tags__item">
+                        <img src="/img/close-black.svg">
+                        <p class="nome__tag">Acessibilidade</p>
+                    </li>
+                    <li class="lista__tags__item">
+                        <img src="/img/close-black.svg">
+                        <p class="nome__tag">Front-end</p>
+                    </li>
+                    <li class="lista__tags__item">
+                        <img src="/img/close-black.svg">
+                        <p class="nome__tag">React</p>
                     </li>
                 </ul>
                 <div class="publicar__projeto__botoes__container">
