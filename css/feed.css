@@ -13,19 +13,83 @@ body {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    font-size: 1.375rem;
+    margin-top: 3rem;
 }
-
-/* .publicados__posts {
-
-} */
  .posts__lista {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, calc(30rem + 1%));
     gap:1.5rem;
  }
-
+.post {
+   max-width: 40rem;
+}
  .foto__post__container {
     background-color: var(--cinza-medio);
-    padding: 1.5rem;
+    padding-top: 1.5rem;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
  }
+ .info__post__container {
+    background-color: var(--cinza-escuro);
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    gap: 0.5rem;
+ }
+ .acoes__post__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .botoes__post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+ }
+ .acao__post {
+    background-color: transparent;
+    border: none;
+ }
+ .criador__post__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+ }
+ @media screen and (max-width: 1285px) {
+   .container__principal {
+      align-content: center;
+      width: 65%;
+   }
+   .publicados__posts {
+      display: flex;
+      justify-content: center;
+   }
+   .posts__lista {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+ }
+ @media screen and (max-width: 770px ) {
+   body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .container__principal{
+      width: 85%;
+      margin-bottom: 8rem;
+   }
+}
+
+@media screen and (max-width: 536px) {
+   .post img{
+      max-width: 75%;;
+   }
+}
