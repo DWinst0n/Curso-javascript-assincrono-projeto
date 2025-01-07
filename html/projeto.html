@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho mobile">
         <img src="/img/Logo.svg" alt="Logo" class="logo">
         <a href="/html/publicar.html" class="botao__publicar">Publicar</a>
     </header>
@@ -36,7 +36,104 @@
             </ul>
         </nav>
     </aside>
-    <main class="container__principal"></main>
+    <main class="container__principal">
+        <section class="post">
+            <div class="foto__post__container">
+                <img src="/img/card-publicao-code-editor2.png">
+            </div>
+            <div class="info__post__container">
+                <h3 class="nome__publicacao">Título do post</h3>
+                <p class="descricao__publicacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur illo corporis nobis sunt, aut earum repudiandae recusandae repellendus mollitia porro a aperiam exercitationem itaque nesciunt cupiditate praesentium. Voluptas, quasi!</p>
+                <div class="acoes__post__container">
+                    <div class="botoes__post">
+                        <button class="acao__post"></button>
+                        <button class="acao__post"></button>
+                        <button class="acao__post"></button>
+                    </div>
+                    <div class="criador__post__container">
+                        <img src="/img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detalhes__post">
+            <h3 class="codigo__titulo">Código:</h3>
+            <textarea wrap="soft" rows="9" class ="descricao__projeto" readonly>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                
+                const unfold = (f, seed) => {
+                  const go = (f, seed, acc) => {
+                    const res = f(seed)
+                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                  }
+                  return go(f, seed, [])
+                }</textarea>
+        </section>
+        <section class="comentarios">
+            <h2 class="comentarios__titulo">Comentarios</h2>
+            <ul class="comentarios__lista">
+                <li class="comentario__container">
+                    <div class="comentario">
+                        <div class="usuario">
+                        <img src="/img/user-circle-fill.svg" alt="Imagem do usuario">
+                        <p class="nome__usuario">@marcia</p></div>
+                        <p class="comentario__texto">Achei muito bom seu código, @julio, parabéns!</p>
+                    </div>
+                    <p class="comentario__acao">Responder</p>
+                    <label class="ver__respostas__container"><hr><p id="verRespostas">ver resposta</p></label>
+                    <hr>
+                </li>
+                <li class="comentario__container">
+                    <div class="comentario">
+                        <div class="usuario">
+                        <img src="/img/user-circle-fill (1).svg" alt="Imagem do usuario">
+                        <p class="nome__usuario">@Gabriel_luz</p></div>
+                        <p class="comentario__texto">Quanto tempo você levou para finalizar esse projeto?</p>
+                    </div>
+                    <p class="comentario__acao">Responder</p>
+                    <label class="ver__respostas__container"><hr><p id="ocultarRespostas">Ocultar respostas</p></label>
+                    <div class="respostas__container">
+                        <div class="comentario">
+                            <div class="usuario">
+                            <img src="/img/card-publicao-criador.svg" alt="Imagem do usuario">
+                            <p class="nome__usuario">@julio</p></div>
+                            <p class="comentario__texto">Até que foi rápido, uns 3 dias!</p>
+                        </div>
+                        <p class="comentario__acao">Responder</p>
+                    </div>
+                    <hr>
+                </li>
+                <li class="comentario__container">
+                    <div class="comentario">
+                        <div class="usuario">
+                        <img src="/img/user-circle-fill (2).svg" alt="Imagem do usuario">
+                        <p class="nome__usuario">@Marcela_Linz</p></div>
+                        <p class="comentario__texto">Espero chegar um dia nesse nível! Muito bom!</p>
+                    </div>
+                    <p class="comentario__acao">Responder</p>
+                    <label class="ver__respostas__container"><hr><p id="ocultarRespostas">Ocultar respostas</p></label>
+                    <div class="respostas__container">
+                        <div class="comentario">
+                            <div class="usuario">
+                            <img src="/img/card-publicao-criador.svg" alt="Imagem do usuario">
+                            <p class="nome__usuario">@julio</p></div>
+                            <p class="comentario__texto">Poxa, obrigado Marcela, tenho certeza que você vai mandar muito bem, se precisar de ajuda é só entrar em contato!</p>
+                        </div>
+                        <p class="comentario__acao">Responder</p>
+                        <div class="comentario">
+                            <div class="usuario">
+                            <img src="/img/user-circle-fill (2).svg" alt="Imagem do usuario">
+                            <p class="nome__usuario">@Marcela_Linz</p></div>
+                            <p class="comentario__texto">Oba! Vou mandar uma mensagem!</p>
+                        </div>
+                        <p class="comentario__acao">Responder</p>
+                    </div>
+                    <hr>
+                </li>
+            </ul>
+        </section>
+    </main>
     <script src="/Javascript/projeto.js"></script>
 </body>
 
