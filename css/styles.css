@@ -238,7 +238,6 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     }
     .menu__flutuante {
         position: fixed;
-        max-width: 100vw;
         bottom: 0;
         gap: 0;
         margin: 0;

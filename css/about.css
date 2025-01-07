@@ -1,1 +1,104 @@
 @import url(styles.css);
+body {
+    height: max-content;
+}
+.imagem2, .imagem3 {
+    display: none;
+}
+.container__principal {
+    margin-top: 7.5%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.menu__flutuante {
+    margin-top: 7.5%;
+    align-self: flex-start;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+.container__principal p {
+    font-size: 1.375rem;
+    line-height: 150%;
+}
+.about__subtitulo {
+    font-size: 2.3125rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+.container__principal img {
+    width: 100%;
+}
+span img {
+    max-width: min-content;
+}
+.titulo__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+.titulo__saudacao {
+    color: var(--cor-destaque);
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+.subtitulo1 {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+}
+.subtitulo1 img{
+    width: 50%;
+}
+.container__principal span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    color: var(--Cinza-mdio, #888);
+
+    font-size: 1.9375rem;
+    line-height: 150%;
+    margin-bottom: 7.5rem; 
+}
+@media screen and (max-width: 1212px) {
+    .imagem1 {
+        display: none;
+    }
+    .imagem2 {
+        display: block;
+    }
+}
+@media screen and (max-width: 975px) {
+    .subtitulo1 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 771px) {
+    body {
+        flex-direction: column;
+    }
+    .container__principal {
+        width: 85%;
+    }
+    .menu__flutuante {
+        margin-top: initial;
+        align-self: initial;
+    }
+}
+@media screen and (max-width: 556px) {
+    .imagem2 {
+        display: none;
+    }
+    .imagem3 {
+        display: block;
+    }
+}
