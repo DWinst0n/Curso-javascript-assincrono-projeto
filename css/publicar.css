@@ -76,7 +76,6 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     background-color: var(--cinza-medio);
-    font-family: Prompt;
     color: var(--cinza-escuro);
 
     font-size: 0.9375rem;
@@ -152,7 +151,7 @@ body {
 .botao-publicar:hover img {
     transform: scale(1.5);
 }
-@media screen and (max-width: 1025px)  {
+@media screen and (max-width: 1026px)  {
     body {
         height: auto;
     }
@@ -165,7 +164,7 @@ body {
         margin-bottom: auto;
     }
 }
-@media screen and (max-width: 770px)  {
+@media screen and (max-width: 776px)  {
     body {
         flex-direction: column;
         justify-content: center;
@@ -179,7 +178,7 @@ body {
         padding: 0.25em 5%;
     }
 }
-@media screen and (max-width: 540px)  {
+@media screen and (max-width: 541px)  {
     .container__principal {
         padding: 0 5%;
     }

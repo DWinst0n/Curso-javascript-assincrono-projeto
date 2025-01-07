@@ -61,7 +61,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
  }
- @media screen and (max-width: 1285px) {
+ @media screen and (max-width: 1286px) {
    .container__principal {
       align-content: center;
       width: 65%;
@@ -76,7 +76,7 @@ body {
       justify-content: center;
    }
  }
- @media screen and (max-width: 770px ) {
+ @media screen and (max-width: 771px ) {
    body {
       display: flex;
       flex-direction: column;
@@ -86,10 +86,13 @@ body {
       width: 85%;
       margin-bottom: 8rem;
    }
+   .post img{
+      max-width: 75%;
+   }
 }
 
-@media screen and (max-width: 536px) {
+@media screen and (max-width: 426px) {
    .post img{
-      max-width: 75%;;
+      max-width: 95%;
    }
 }
