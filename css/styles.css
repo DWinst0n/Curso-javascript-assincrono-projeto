@@ -1,5 +1,5 @@
 @import url(/css/reset.css);
-
+@import url(/css/icones.css);
 :root {
     --cor-destaque: #81FE88;
     --cor-destaque2: #BFFFC3;
@@ -37,7 +37,7 @@ img {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     user-select: none;
-    transition: transform 0.5s;
+    transition: transform 0.3s ease-in-out;
 }
 
 hr {
@@ -46,7 +46,6 @@ hr {
     width: 100%;
 }
 a {
-    text-decoration: none;
     color: var(--cinza-medio);
 }
 input, textarea {
@@ -151,7 +150,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     opacity: 1;
     transform: translateX(0);
 }
-
+.material-icons {
+    transition: transform 0.5s ease-in-out;
+}
 .lista__links {
     display: flex;
     flex-direction: column;
@@ -193,16 +194,14 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     font-size: 1.375rem;
     line-height: 150%;
 }
-
-.menu__link:hover img {
-    transition: transform 1s ease;
-    transform: scale(1.5);
-}
-
-.menu__link:hover .menu__link__texto {
+.menu__link:hover{
     transition: color 1s;
     color: var(--cor-destaque);
-    text-decoration: underline;
+}
+.menu__link:hover .material-icons {
+    transform: scale(1.5);
+    color: var(--cor-destaque);
+    text-decoration: none;
 }
 .container__principal {
     max-width: 62.25rem;;
@@ -247,7 +246,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
         padding: 1.5rem 100%;
         justify-content: center;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
     }
     .lista__links {
         flex-direction: row;

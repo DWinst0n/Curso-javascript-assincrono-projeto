@@ -57,7 +57,7 @@ body {
     gap: 1.5rem;
 }
 
-.usuario__texto, .senha__texto {
+.usuario__texto, .senha__texto, .email__texto {
     color: var(--offwhite);
     font-size: 1.125rem;
     line-height: 1.5;
@@ -89,14 +89,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     background: var(--cor-destaque);
     border: none;
+
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 150%; 
-    transition: background-color 0.5s, border 0.3s, color 0.3s;
+    color: var(--verde-petroleo);
+
+    transition: background-color 0.5s, border 0.3s, color 0.1s ease-in;
 }
 .botao__login:hover, .botao__cadastro:hover {
     background-color: var(--cor-destaque2);
@@ -111,8 +115,11 @@ body {
     font-size: 0.9375rem;
     line-height: 1.5;
     text-decoration: underline;
+    transition: color 0.5s;
 }
-
+.esqueceu__senha:hover {
+    color: var(--cor-destaque);
+}
 .outras__contas__texto__container {
     display: flex;
     justify-content: space-between;
@@ -140,24 +147,29 @@ body {
 .outras__contas__container {
     margin-top: -1.25em;
 }
+
 .conta {
     border: none;
     border-radius: 100em;
     background-color: transparent;
 }
+
 .conta__icone {
     width: 32px;
     height: 32px;
     pointer-events: all;
 }
-.conta__icone:hover {
-    transform: scale(1.2);
+
+.conta:hover .conta__icone {
+    transform: scale(1.3); 
 }
+
 .conta__texto {
     color: var(--offwhite);
     font-size: 0.78125rem;
     line-height: 150%;
 }
+
 .criar__conta__container {
     display: flex;
     flex-direction: column;
@@ -182,6 +194,12 @@ body {
     font-size: 1.125rem;
     line-height: 150%;
     text-decoration: none;
+}
+.conta__link:hover {
+    text-decoration: underline;
+}
+.conta__link:hover img {
+ transform: scale(1.3);
 }
 .simbolo__cima {
     left: 5%;

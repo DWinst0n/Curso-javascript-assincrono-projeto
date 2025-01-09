@@ -37,7 +37,7 @@ q:before, q:after {
 	outline: 0;
 }
 
-ins {
+ins, a {
 	text-decoration: none;
 }
 del {

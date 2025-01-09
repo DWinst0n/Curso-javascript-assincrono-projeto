@@ -2,6 +2,9 @@
 body {
     height: max-content;
 }
+.about, .material-icons {
+    color: var(--branco);
+ }
 .imagem2, .imagem3 {
     display: none;
 }
@@ -15,7 +18,7 @@ body {
     margin-top: 7.5%;
     align-self: flex-start;
 }
-.about {
+.about__container {
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
@@ -92,6 +95,9 @@ span img {
     .menu__flutuante {
         margin-top: initial;
         align-self: initial;
+    }
+    span {
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 556px) {

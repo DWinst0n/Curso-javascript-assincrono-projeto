@@ -5,7 +5,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .container__principal {
     border-radius: 0.5rem;
     background-color: var(--cinza-escuro);

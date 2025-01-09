@@ -3,6 +3,9 @@ body {
     height: auto;
     align-items: flex-start;
 }
+.feed, .material-icons {
+   color: var(--branco);
+}
 .menu__flutuante {
     margin-top: 5%;
 }
