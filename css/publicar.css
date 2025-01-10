@@ -14,6 +14,9 @@ body {
     justify-content: center;
     gap: 1.5rem;
 }
+.publicar__container {
+    max-width: min-content;
+}
 .carregar__projeto__container{
     display: flex;
     flex-direction: column;
