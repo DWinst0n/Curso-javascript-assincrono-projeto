@@ -18,17 +18,22 @@ body {
     gap: 1.5rem;
     margin-bottom: 2rem;
 
-    font-size: 1.375rem;
     margin-top: 3rem;
+}
+.publicados__filtro__link {
+   font-size: 1.375rem;
+   transition: color 0.5s, text-decoration 0.5s;
+}
+.publicados__filtro__link:hover {
+   text-decoration: underline;
+   color: var(--cor-destaque);
 }
  .posts__lista {
     display: grid;
-    grid-template-columns: repeat(2, calc(30rem + 1%));
+    grid-template-columns: repeat(2, 2fr);
     gap:1.5rem;
+    margin-bottom: 5rem;
  }
-.post {
-   max-width: 40rem;
-}
  .foto__post__container {
     background-color: var(--cinza-medio);
     padding-top: 1.5rem;
@@ -44,6 +49,8 @@ body {
     gap: 0.5rem;
  }
  .acoes__post__container {
+   margin-top: 4rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +64,19 @@ body {
  .acao__post {
     background-color: transparent;
     border: none;
+
+    color: var(--cinza-medio);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: color 0.5s;
+ }
+ .acao__post:hover {
+   color: var(--cor-destaque);
+ }
+ .acao__post:hover .material-icons {
+   transform: scale(1.2);
  }
  .criador__post__container {
     display: flex;
@@ -75,7 +95,7 @@ body {
    }
    .posts__lista {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: center;
    }
  }
