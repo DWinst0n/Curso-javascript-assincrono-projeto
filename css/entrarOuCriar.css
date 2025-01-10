@@ -5,6 +5,9 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+* {
+    user-select: none;
+}
 .container__principal {
     max-width: 62.25rem;
     display: flex;
@@ -79,12 +82,52 @@ body {
     width: 100%;
     margin-top: -1em;
 }
-
-.lembrar {
+.checkbox__container {
     display: flex;
-    gap: 0.25rem;
-}
+    gap: 0.5rem;
 
+    width: min-content;
+}
+.input-checkbox {
+    display: none;
+}
+.checkbox-customizado {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2.5px solid var(--cinza-medio);
+    cursor: pointer;
+    border-radius: 4px;
+}
+.checked {
+    background-color: var(--transparent);
+    position: relative;
+}
+.checkbox-customizado.checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: -5%;
+    width: 5px;
+    height: 14px;
+
+    border-top: 2px solid var(--cor-destaque);
+    border-left: 2px solid var(--cor-destaque);
+
+    transform: rotate(-140deg);
+}
+.lembrar {
+    color: var(--cinza-medio);
+    user-select: none;
+    font-size: 1rem;
+    line-height: 150%;
+    white-space: nowrap;
+    transition: color 0.5s;
+}
+.checkbox-customizado:hover~.lembrar, .lembrar:hover {
+    color: var(--cor-destaque);
+    text-decoration: underline;
+}
 .botao__login, .botao__cadastro  {
     display: flex;
     justify-content: center;
