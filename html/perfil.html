@@ -12,12 +12,12 @@
 </head>
 <body>
     <header class="cabecalho">
-        <img src="/img/Logo.svg" alt="Logo" class="logo">
+        <a href="/html/feed.html"><img src="/img/Logo.svg" alt="Logo" class="logo"></a>
         <a href="/html/publicar.html" class="botao__publicar">Publicar</a>
     </header>
     <aside class="menu__flutuante">
         <div class="desktop">
-            <img src="/img/Logo.svg" alt="Logo" class="Logo desktop">
+            <a href="/html/feed.html"><img src="/img/Logo.svg" alt="Logo" class="logo"></a>
         </div>        
         <nav class="menu__opcoes">
             <ul class="lista__links">
@@ -45,8 +45,132 @@
             </ul>
         </nav>
     </aside>
-    <main class="container__principal"></main>
+    <main class="container__principal">
+        <section class="perfil__container">
+            <div class="imagem__perfil__container">
+                <img src="/img/ellipse-4.png" alt="Imagem do Usuário">
+            </div>
+            <div class="info__perfil__container">
+                <div class="seguir__perfil">
+                    <p>@julio</p>
+                    <button class="seguir__botao">Seguir</button>
+                </div>
+                <div class="info__perfil">
+                    <h2>Júlio Oliveira</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis inventore error quidem, libero possimus, repellat alias perferendis at accusantium tenetur similique explicabo asperiores vel non quo veniam commodi ut esse.</p>
+                    <div class="perfil__dados">
+                        <p>5 projetos</p>
+                        <p>25 conexões</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="projetos__container">
+            <div class="projetos__filtros">
+                <a href="#">Meus projetos</a>
+                <a href="#">Aprovados</a>
+                <a href="#">Compartilhados</a>
+            </div>
+                <ul class="posts__lista">
+                    <li class="post">
+                        <a class="foto__post__container" href = "/html/projeto.html">
+                            <img src="/img/card-publicao-code-editor1.png">
+                        </a>
+                        <div class="info__post__container">
+                            <h3 class="nome__publicacao">Título do post em duas linhas</h3>
+                            <p class="descricao__publicacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel vitae mollitia esse temporibus corporis, eum, tenetur numquam reprehenderit quod ipsam nostrum sapiente perspiciatis rem amet blanditiis, odio adipisci ullam.</p>
+                            <div class="acoes__post__container">
+                                <div class="botoes__post">
+                                    <button class="acao__post"><span class="material-icons">code</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">share</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">chat</span><p>12</p></button>
+                                </div>
+                                <div class="criador__post__container">
+                                    <img src="/img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="post">
+                        <a class="foto__post__container" href = "projeto.html">
+                            <img src="/img/card-publicao-code-editor2.png">
+                        </a>
+                        <div class="info__post__container">
+                            <h3 class="nome__publicacao">Título do post em duas linhas</h3>
+                            <p class="descricao__publicacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur illo corporis nobis sunt, aut earum repudiandae recusandae repellendus mollitia porro a aperiam exercitationem itaque nesciunt cupiditate praesentium. Voluptas, quasi!</p>
+                            <div class="acoes__post__container">
+                                <div class="botoes__post">
+                                    <button class="acao__post"><span class="material-icons">code</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">share</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">chat</span><p>12</p></button>
+                                </div>
+                                <div class="criador__post__container">
+                                    <img src="/img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="post">
+                        <a class="foto__post__container" href = "projeto.html">
+                            <img src="/img/card-publicao-code-editor7.png">
+                        </a>
+                        <div class="info__post__container">
+                            <h3 class="nome__publicacao">Título do post em duas linhas</h3>
+                            <p class="descricao__publicacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde recusandae commodi beatae porro impedit est optio consectetur, enim omnis cum sint, officia ducimus nulla laborum tenetur necessitatibus odit cupiditate nisi.</p>
+                            <div class="acoes__post__container">
+                                <div class="botoes__post">
+                                    <button class="acao__post"><span class="material-icons">code</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">share</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">chat</span><p>12</p></button>
+                                </div>
+                                <div class="criador__post__container">
+                                    <img src="/img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="post">
+                        <a class="foto__post__container" href = "projeto.html">
+                            <img src="/img/card-publicao-code-editor8.png">
+                        </a>
+                        <div class="info__post__container">
+                            <h3 class="nome__publicacao">Título do post em duas linhas</h3>
+                            <p class="descricao__publicacao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro molestiae assumenda, odit quis eaque eligendi, soluta reprehenderit blanditiis error distinctio illo dignissimos nostrum, ipsa quae? Incidunt, quia quaerat? Sed, et.</p>
+                            <div class="acoes__post__container">
+                                <div class="botoes__post">
+                                    <button class="acao__post"><span class="material-icons">code</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">share</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">chat</span><p>12</p></button>
+                                </div>
+                                <div class="criador__post__container">
+                                    <img src="/img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="post">
+                        <a class="foto__post__container" href = "projeto.html">
+                            <img src="/img/card-publicao-code-editor9.png">
+                        </a>
+                        <div class="info__post__container">
+                            <h3 class="nome__publicacao">Título do post em duas linhas</h3>
+                            <p class="descricao__publicacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta assumenda, dolores ea autem, voluptatibus repudiandae similique magni facere nam quaerat optio suscipit laudantium recusandae tempore dignissimos, impedit molestiae quod cupiditate.</p>
+                            <div class="acoes__post__container">
+                                <div class="botoes__post">
+                                    <button class="acao__post"><span class="material-icons">code</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">share</span><p>12</p></button>
+                                    <button class="acao__post"><span class="material-icons">chat</span><p>12</p></button>
+                                </div>
+                                <div class="criador__post__container">
+                                    <img src="/img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+        </section>
+    </main>
     <script src="/Javascript/perfil.js"></script>
 </body>
-
 </html>
