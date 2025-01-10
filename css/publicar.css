@@ -49,15 +49,28 @@ body {
     outline: 4px double var(--cor-destaque);
     color: var(--cor-destaque);
 }
-.carregar__projeto__botao:hover img {
+.carregar__projeto__botao:hover .material-icons {
     transform: scale(1.5);
     
 }
 .projeto__arquivo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: min-content;
+
     color: var(--cinza-medio);
     font-size: 0.9375rem;
     font-weight: 400;
-    line-height: 150%
+    line-height: 150%;
+    transition: color 0.5s;
+}
+.projeto__arquivo:hover {
+    color: var(--cor-destaque);
+}
+.projeto__arquivo:hover .material-icons {
+    transform: scale(1.5);
+    color: var(--cor-destaque);
 }
 .info__projeto {
     display: flex;
@@ -93,8 +106,8 @@ body {
     line-height: 150%;
 }
 .lista__tags {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 .publicar__projeto__botoes__container {
