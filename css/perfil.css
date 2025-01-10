@@ -71,3 +71,14 @@ hr {
     color: var(--cor-destaque);
     text-decoration: underline;
  }
+ @media screen and (max-width: 485px) {
+   .perfil__container {
+      flex-direction: column;
+   }
+   .seguir__perfil{
+      justify-content: center;
+   }
+   .projetos__filtros {
+      flex-direction: column;
+   }
+ }
