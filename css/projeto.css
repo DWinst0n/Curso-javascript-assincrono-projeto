@@ -1,5 +1,5 @@
 @import url(styles.css);
-@import url(/css/feed.css);
+@import url(feed.css);
 .feed, .material-icons {
     color: var(--branco);
  }

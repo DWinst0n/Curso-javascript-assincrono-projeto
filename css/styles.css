@@ -1,5 +1,5 @@
-@import url(/css/reset.css);
-@import url(/css/icones.css);
+@import url(reset.css);
+@import url(icones.css);
 :root {
     --cor-destaque: #81FE88;
     --cor-destaque2: #BFFFC3;
