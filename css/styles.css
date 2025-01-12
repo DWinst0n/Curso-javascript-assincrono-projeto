@@ -85,7 +85,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     color: var(--cinza-claro);
     font-size: 1.375rem;
     line-height: 150%;
-    background-image: url(/img/search.svg);
+    background-image: url(../img/search.svg);
     background-repeat: no-repeat;
     background-position: 1rem;
 }
