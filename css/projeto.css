@@ -3,6 +3,13 @@
 .feed, .material-icons {
     color: var(--branco);
  }
+ .simbolo__cima {
+    position: fixed;
+    z-index: -1;
+    width: 20%;
+    left: 0;
+    top: 0;
+}
 .container__principal {
     justify-content: center;
     align-items: center;

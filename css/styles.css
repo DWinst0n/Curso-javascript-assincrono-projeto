@@ -64,7 +64,7 @@ input::-webkit-clear-button {
 input:hover, input:focus, textarea:hover, textarea:focus {
     outline: 4px double var(--cor-destaque);
 }
-.mobile {
+.mobile, .mobile2 {
     display: none;
 }
 .form__pesquisa {
@@ -158,7 +158,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     background: var(--cinza-escuro);
     margin-right: 2.5%;
     opacity: 0;
-    max-height: 80vh;
+    height: min-content;
     transition: opacity 0.75s ease, transform 2s ease;
 }
 .menu__flutuante.loaded{
@@ -303,6 +303,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
         flex-direction: column;
         align-items: center;
         gap: 2.5rem;
+    }
+    .mobile2 {
+        display: block;
     }
     .logo {
         max-width: 8rem;
