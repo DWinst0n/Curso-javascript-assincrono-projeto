@@ -39,7 +39,9 @@ img {
     user-select: none;
     transition: transform 0.3s ease-in-out;
 }
-
+a, button {
+    user-select: none;
+}
 hr {
     border: none;
     border-top: 2px solid var(--offwhite);
@@ -112,6 +114,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     font-size: 1.125rem;
     line-height: 150%;
     transition: padding 0.5s;
+    user-select: none;
 }
 .lista__tags__item img {
     position: absolute;
