@@ -172,14 +172,24 @@ function apagarProjeto() {
 async function publicarProjeto(projeto) {
   return new Promise((resolve, reject) => {
     //para simular a conexão de um banco de dados
+    const avisoCarregando = document.getElementById("telaCarregamento");
+    const carregandoTexto = document.createElement("p");
+    avisoCarregando.appendChild(carregandoTexto);
+    carregandoTexto.textContent = "Carregando...";
+    carregandoTexto.id = "carregandoTexto"
+
+    avisoCarregando.style.display = "flex";
+
     setTimeout(() => {
       let conexaoBemSucedida = Math.random() > 0.01;
       if (conexaoBemSucedida) {
         const projetoJSON = JSON.stringify(projeto);
         sessionStorage.setItem("projeto", projetoJSON);
         resolve(projetoJSON);
+        avisoCarregando.style.display = "none";
       } else {
         reject("Para simular a realidade, tem 1% de chance de dar errado... pois tá aí...");
+        avisoCarregando.style.display = "none";
       }
     }, 2000);
   })
@@ -201,6 +211,11 @@ botaoPublicar.addEventListener("click", async (event) => {
       resultado = await publicarProjeto(projeto);
       if (resultado) {
         alert("Projeto publicado com sucesso!");
+        setTimeout(() => {
+          const avisoCarregando = document.getElementById("telaCarregamento");
+          avisoCarregando.style.display = "flex"
+          document.getElementById("carregandoTexto").textContent = "Indo para a página inicial...";
+        }, 1000);
         setTimeout(() => {
           window.location.href = "feed.html"
         }, 3000);

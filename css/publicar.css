@@ -5,7 +5,17 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.tela__carregamento {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--verde-petroleo);
+    padding: 1.5rem;
+    opacity: 0.85;
+}
+.tela__carregamento p {
+    opacity: 1;
+}
 .container__principal {
     max-height: 40rem;
     overflow-y: auto;

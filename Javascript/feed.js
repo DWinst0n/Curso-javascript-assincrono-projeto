@@ -48,7 +48,7 @@ document.getElementById("limparTags").addEventListener("click", (e) => {
 if(tagsOriginais.length > 0) {
   tagsOriginais.forEach(tag => {
     tag.addEventListener("click", () => {
-      tagsLista.remove();
+      tag.remove();
     })
   });
 }
