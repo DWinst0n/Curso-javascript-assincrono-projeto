@@ -12,6 +12,47 @@ window.addEventListener('load', () => {
   const containerPrincipal = document.querySelector('.container__principal');
   containerPrincipal.classList.add('loaded');
 })
+
+const tagsLista = document.getElementById("tagsLista");
+
+document.getElementById("limparTags").addEventListener("click", (e) => {
+  e.preventDefault();
+  tagsLista.innerHTML = "";
+})
+
+const tagsOriginais = document.querySelectorAll(".original");
+if(tagsOriginais.length > 0) {
+  tagsOriginais.forEach(tag => {
+    tag.addEventListener("click", () => {
+      tag.remove();
+    })
+  });
+}
+const projetoJSON = sessionStorage.getItem("projeto");
+if (projetoJSON) {
+  const projeto = JSON.parse(projetoJSON);
+  tagsLista.innerHTML = "";
+  projeto.tags.forEach(tag => {
+    const itemTag = document.createElement("li");
+    itemTag.classList.add("lista__tags__item");
+
+    const svgX = document.createElement("img");
+    svgX.src = "../img/close-black.svg";
+    itemTag.appendChild(svgX);
+
+    const nomeTag = document.createElement("p");
+    nomeTag.textContent = tag;
+    nomeTag.classList.add("nome__tag");
+    itemTag.appendChild(nomeTag);
+
+    tagsLista.appendChild(itemTag);
+    
+    itemTag.addEventListener("click", () => {
+      itemTag.remove();
+    })
+  })
+}
+
 //upload de imagens
 const projetoImagemContainer = document.querySelector(".carregar__projeto__container")
 const uploadBotao = document.getElementById("upload-btn");
