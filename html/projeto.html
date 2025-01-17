@@ -48,13 +48,13 @@
         </nav>
     </aside>
     <main class="container__principal">
-        <section class="post">
-            <div class="foto__post__container">
-                <img src="../img/card-publicao-code-editor2.png">
-            </div>
+        <section class="post" id="post1">
+            <a class="foto__post__container" href = "projeto.html">
+                <img src="../img/card-publicao-code-editor1.png" id="post1Img">
+            </a>
             <div class="info__post__container">
-                <h3 class="nome__publicacao">Título do post</h3>
-                <p class="descricao__publicacao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur illo corporis nobis sunt, aut earum repudiandae recusandae repellendus mollitia porro a aperiam exercitationem itaque nesciunt cupiditate praesentium. Voluptas, quasi!</p>
+                <h3 class="nome__publicacao" id="post1Nome">Título do post em duas linhas</h3>
+                <p class="descricao__publicacao" id="post1Descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur illo corporis nobis sunt, aut earum repudiandae recusandae repellendus mollitia porro a aperiam exercitationem itaque nesciunt cupiditate praesentium. Voluptas, quasi!</p>
                 <div class="acoes__post__container">
                     <div class="botoes__post">
                         <button class="acao__post"><span class="material-icons">code</span><p>12</p></button>
@@ -62,24 +62,55 @@
                         <button class="acao__post"><span class="material-icons">chat</span><p>12</p></button>
                     </div>
                     <div class="criador__post__container">
-                        <img src="../img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome" id="postCriadorNome">@Julio</p>
+                        <img src="../img/card-publicao-criador.svg" alt="Imagem do criador desse post"><p class="criador__post__nome">@Julio</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="detalhes__post">
             <h3 class="codigo__titulo">Código:</h3>
-            <textarea wrap="soft" rows="9" class ="descricao__projeto" readonly>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-                
-                const unfold = (f, seed) => {
-                  const go = (f, seed, acc) => {
-                    const res = f(seed)
-                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+            <textarea wrap="soft" rows="9" class ="descricao__projeto" readonly>
+                async function publicarProjeto(projeto) {
+                    return new Promise((resolve, reject) => {
+                      //para simular a conexão de um banco de dados
+                      setTimeout(() => {
+                        let conexaoBemSucedida = Math.random() > 0.01;
+                        if (conexaoBemSucedida) {
+                          const projetoJSON = JSON.stringify(projeto);
+                          sessionStorage.setItem("projeto", projetoJSON);
+                          resolve(projetoJSON);
+                        } else {
+                          reject("Para simular a realidade, tem 1% de chance de dar errado... pois tá aí...");
+                        }
+                      }, 2000);
+                    })
                   }
-                  return go(f, seed, [])
-                }</textarea>
+                  const botaoPublicar = document.getElementById("botaoPublicar");
+                  
+                  botaoPublicar.addEventListener("click", async (event) => {
+                    event.preventDefault();
+                    if (nomeProjeto.value.trim() == "" ||imagemPrincipal.src == "../img/imagem1.png" || descricaoProjeto.value.trim() == "") {
+                      alert("Preencha todos os dados")
+                    } else {
+                      const projeto = {
+                        nome: nomeProjeto.value,
+                        imagem: imagemPrincipal.src,
+                        descricao: descricaoProjeto.value,
+                        tags: Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent)
+                      }
+                      try {
+                        resultado = await publicarProjeto(projeto);
+                        if (resultado) {
+                          alert("Projeto publicado com sucesso!");
+                          setTimeout(() => {
+                            window.location.href = "feed.html"
+                          }, 3000);
+                        }
+                      } catch (error) {
+                        alert(error);
+                      }
+                    }
+                  });</textarea>
         </section>
         <section class="comentarios">
             <h2 class="comentarios__titulo">Comentarios</h2>

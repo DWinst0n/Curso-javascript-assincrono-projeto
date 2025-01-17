@@ -41,9 +41,9 @@
     <main class="container__principal publicar__container">
         <section class="barra__pesquisa mobile">
             <form class="form__pesquisa">
-                <input type="search" placeholder="Digite o que você procura" class="input__pesquisa">
+                <input type="search" placeholder="Digite o que você procura" class="input__pesquisa" id="inserirPesquisa">
                 <div class="pesquisa__tags__container">
-                    <ul class="pesquisa__lista__tags">
+                    <ul class="pesquisa__lista__tags" id="tagsLista">
                         <li class="lista__tags__item">
                             <img src="../img/close-black.svg">
                             <p class="nome__tag">Front-end</p>
@@ -61,13 +61,15 @@
                 </div>
             </form>
         </section>
-        <section>
-            <form  class="carregar__projeto__container">
+        <section class="carregar__projeto__container">
+            <form>
                 <div class="foto__projeto__container">
                     <img src="../img/imagem1.png" alt="imagem do Projeto" class="imagem__projeto" id="imagemProjeto">
                 </div>
-                <button class="carregar__projeto__botao">Carregar imagem <span class="material-icons">upload</span></button>
-                <span class="projeto__arquivo">image_projeto.png <span class="projeto__arquivo material-icons">close</span></span>
+                <label for="upload-btn">
+                    <button class="carregar__projeto__botao" id="upload-btn">Carregar imagem <span class="material-icons">upload</span></button>
+                    <input type="file" id="imagemUpload" accept="image/" style="display: none;">
+                </label>
             </form>
         </section>
 
@@ -75,36 +77,26 @@
             <h1 class="publicar__titulo">Novo Projeto</h1>
             <form class="publicar__projeto__info">
                 <div class="campo__projeto inserir__nome__projeto">
-                    <label for="nome" class="texto__info__projeto">Nome do Projeto</label>
-                    <input type="text" class="inserir__info__projeto nome__projeto" id="nome" name="nome">
+                    <label for="nomeProjeto" class="texto__info__projeto">Nome do Projeto</label>
+                    <input type="text" class="inserir__info__projeto nome__projeto" id="nomeProjeto" name="nome do projeto">
                 </div>
                 <div class="campo__projeto inserir__descricao">
                     <label for="descricaoTexto" class="texto__info__projeto">Descrição do Projeto</label>
-                    <textarea wrap="soft" rows="3" style="resize: none;" class ="inserir__info__projeto descricao__projeto" id="descricaoTexto" name="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea>
+                    <textarea wrap="soft" rows="3" style="resize: none;" class ="inserir__info__projeto descricao__projeto" id="descricaoTexto" name="descricao"></textarea>
                 </div>
                 <div class="campo__projeto tags__projeto">
                     <label for="categoria" class="texto__info__projeto">Tags</label>
-                    <input type="text" id="categoria" class ="inserir__info__projeto descricao__projeto" name="tags">
+                    <input type="text" id="categoria" class ="inserir__info__projeto descricao__projeto" name="tags" maxlength="27">
                 </div>
                 <ul class="lista__tags">
-                    <li class="lista__tags__item">
-                        <img src="../img/close-black.svg">
-                        <p class="nome__tag">Acessibilidade</p>
-                    </li>
-                    <li class="lista__tags__item">
-                        <img src="../img/close-black.svg">
-                        <p class="nome__tag">Front-end</p>
-                    </li>
-                    <li class="lista__tags__item">
-                        <img src="../img/close-black.svg">
-                        <p class="nome__tag">React</p>
-                    </li>
+
                 </ul>
                 <div class="publicar__projeto__botoes__container">
-                    <button class="botao__descartar">Descartar<img src="../img/trash.svg"></button>
-                    <button class="botao-publicar">Publicar<img src="../img/arrow_forward2.svg" alt=""></button>
+                    <button class="botao__descartar" id="botaoDescartar">Descartar<img src="../img/trash.svg"></button>
+                    <button class="botao-publicar" id="botaoPublicar">Publicar<img src="../img/arrow_forward2.svg" alt=""></button>
                 </div>
             </form>
+            <span>ㅤ</span>
         </section>
     </main>
     <script src="../Javascript/publicar.js"></script>
