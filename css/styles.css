@@ -234,7 +234,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 .cabecalho {
     display: none;
 }
-@media screen  and (max-height: 706px){
+@media screen  and (max-height: 695px){
     .menu__flutuante{
         position: static;
     }
@@ -280,8 +280,11 @@ input:hover, input:focus, textarea:hover, textarea:focus {
         align-self: center;
         margin: 1rem auto;
     }
+    .input__pesquisa {
+        width: 80vw;
+    }
     .input__pesquisa::placeholder {
-        font-size: 0.9375rem;
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 426px) {

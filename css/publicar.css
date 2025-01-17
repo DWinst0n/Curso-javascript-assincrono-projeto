@@ -5,7 +5,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .container__principal {
+    max-height: 40rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: var(--cor-destaque) transparent;
+
     border-radius: 0.5rem;
     background-color: var(--cinza-escuro);
     padding: 2rem;
@@ -20,14 +26,22 @@ body {
 .carregar__projeto__container{
     display: flex;
     flex-direction: column;
+
+    position: sticky;
+    top: 0;
 }
 .foto__projeto__container{
     border-radius: 0.5rem;
     background: var(--cinza-medio);
     padding: 1.5em 1rem;
-    max-width: 30rem;
+    max-width: max-content;
     align-items: center;
     align-self: center;
+}
+.imagem__projeto {
+    max-width: 28rem;
+    max-height: 20rem;
+    border-radius: 0.5rem;
 }
 .carregar__projeto__botao {
     display: flex;
@@ -36,6 +50,7 @@ body {
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     background-color: transparent;
     border: 1px solid var(--cinza-medio);
@@ -61,6 +76,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     width: min-content;
+    white-space: nowrap;
 
     color: var(--cinza-medio);
     font-size: 0.9375rem;
@@ -173,13 +189,18 @@ body {
     .container__principal {
         flex-direction: column;
         margin: 5% 0;
+        overflow-y:hidden;
+        max-height: min-content;
     }
     .menu__flutuante {
         margin-top: 5%;
         margin-bottom: auto;
     }
+    .carregar__projeto__container{
+        position: static;
+    }
 }
-@media screen and (max-width: 776px)  {
+@media screen and (max-width: 771px)  {
     body {
         flex-direction: column;
         justify-content: center;
@@ -188,9 +209,6 @@ body {
     .container__principal {
         margin-bottom: 8rem;
         background-color: transparent;
-    }
-    .foto__projeto__container{
-        padding: 0.25em 5%;
     }
 }
 @media screen and (max-width: 541px)  {

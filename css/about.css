@@ -9,13 +9,13 @@ body {
     display: none;
 }
 .container__principal {
-    margin-top: 7.5%;
+    margin-top: 5%;
     width: 65%;
     display: flex;
     flex-direction: column;
 }
 .menu__flutuante {
-    margin-top: 7.5%;
+    margin-top: 5%;
     align-self: flex-start;
 }
 

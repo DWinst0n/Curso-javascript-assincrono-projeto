@@ -36,10 +36,14 @@ body {
  }
  .foto__post__container {
     background-color: var(--cinza-medio);
-    padding-top: 1.5rem;
+    padding: 1.5rem;
     border-radius: 0.5rem 0.5rem 0rem 0rem;
     display: flex;
     justify-content: center;
+ }
+ .foto__post__container img {
+   max-height: 18rem;
+   border-radius: 2rem;
  }
  .info__post__container {
     background-color: var(--cinza-escuro);
