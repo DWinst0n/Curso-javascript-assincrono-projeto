@@ -32,7 +32,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     gap:1.5rem;
-    margin-bottom: 5rem;
+    margin: 0 1% 5rem auto;
  }
  .foto__post__container {
     background-color: var(--cinza-medio);
@@ -88,10 +88,13 @@ body {
     justify-content: center;
     gap: 0.5rem;
  }
- @media screen and (max-width: 1286px) {
+ @media screen and (max-width: 1395px) {
    .container__principal {
       align-content: center;
       width: 65%;
+   }
+   .post{
+      width: 100%;
    }
    .publicados__posts {
       display: flex;

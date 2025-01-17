@@ -14,10 +14,6 @@
     justify-content: center;
     align-items: center;
 }
-.post {
-    max-width: max-content;
-    width: 100%;
-}
 .detalhes__post {
     display: flex;
     flex-direction: column;
@@ -96,11 +92,12 @@
 .usuario {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 @media screen and (max-width: 1286px) {
     .container__principal {
         margin-top: 10%;
-       width: 65%;
+        width: 65%;
     }
 }
 @media screen and (max-width: 556px) {
