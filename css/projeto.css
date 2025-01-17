@@ -96,7 +96,6 @@
 }
 @media screen and (max-width: 1286px) {
     .container__principal {
-        margin-top: 10%;
         width: 65%;
     }
 }
