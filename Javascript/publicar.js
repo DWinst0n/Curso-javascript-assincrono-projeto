@@ -2,7 +2,10 @@
 const descricaoProjeto = document.getElementById("descricaoTexto");
 const nomeProjeto =  document.getElementById("nomeProjeto");
 
-descricaoProjeto.addEventListener("input", function () {
+nomeProjeto.addEventListener('keydown', (e) => {e.preventDefault();})
+descricaoProjeto.addEventListener("input", function (e) {
+    e.preventDefault();
+
     this.style.height = "auto";
     this.style.height = this.scrollHeight + "px";
   });
@@ -54,46 +57,47 @@ if (projetoJSON) {
 }
 
 //upload de imagens
-const projetoImagemContainer = document.querySelector(".carregar__projeto__container")
+const projetoImagemContainer = document.querySelector(".carregar__projeto__container");
 const uploadBotao = document.getElementById("upload-btn");
 const inputImagemUpload = document.getElementById("imagemUpload");
+const imagemPrincipal = document.getElementById("imagemProjeto");
 
 uploadBotao.addEventListener("click", (event) => {
   event.preventDefault();
-
   inputImagemUpload.click();
 });
 
-const imagemPrincipal = document.getElementById("imagemProjeto");
-
-function lerArquivo (arquivo) {
+function lerArquivo(arquivo) {
   return new Promise((resolve, reject) => {
     const leitor = new FileReader();
     leitor.onload = () => {
-      resolve({ url: leitor.result, nome: arquivo.name})
-    }
-
+      resolve({ url: leitor.result, nome: arquivo.name });
+    };
     leitor.onerror = () => {
       reject(`Erro na leitura do arquivo ${arquivo.name}`);
-    }
+    };
     leitor.readAsDataURL(arquivo);
-  })
+  });
 }
 
-inputImagemUpload.addEventListener("change", async (event)=> {
+inputImagemUpload.addEventListener("change", async (event) => {
   const arquivo = event.target.files[0];
 
-  if(arquivo) {
+  if (arquivo) {
+    const arquivoTexto = document.querySelector(".projeto__arquivo");
     try {
+      if (arquivoTexto) {
+        arquivoTexto.remove();
+      }
+
       const conteudoDoArquivo = await lerArquivo(arquivo);
       imagemPrincipal.src = conteudoDoArquivo.url;
 
       const arquivoImagemNome = document.createElement("span");
       arquivoImagemNome.textContent = conteudoDoArquivo.nome;
-      arquivoImagemNome.classList.add("projeto__arquivo")
+      arquivoImagemNome.classList.add("projeto__arquivo");
 
       const apagarProjeto = document.createElement("span");
-
       apagarProjeto.classList.add("material-icons");
       apagarProjeto.innerHTML = "close";
       arquivoImagemNome.appendChild(apagarProjeto);
@@ -101,14 +105,17 @@ inputImagemUpload.addEventListener("change", async (event)=> {
       projetoImagemContainer.appendChild(arquivoImagemNome);
 
       arquivoImagemNome.addEventListener("click", () => {
-        document.querySelector(".projeto__arquivo").remove();
+        arquivoImagemNome.remove();
         imagemPrincipal.src = "../img/imagem1.png";
-      })
+      });
+
+      inputImagemUpload.value = '';
     } catch (erro) {
-      console.error("Erro na leitura do arquivo");
+      console.error("Erro na leitura do arquivo:", erro);
     }
   }
 });
+
 const inserirTags = document.getElementById("categoria");
 const interacoes = ["blur", "keydown"];
 const listaTags = document.querySelector(".lista__tags");
@@ -153,7 +160,7 @@ botaoDescartar.addEventListener("click", (event) => {
 
   apagarProjeto();
   try {
-    document.querySelector(".projeto__arquivo").remove();
+    arquivoTexto.remove();
   } catch (error) {
     return;
   }
@@ -198,8 +205,8 @@ const botaoPublicar = document.getElementById("botaoPublicar");
 
 botaoPublicar.addEventListener("click", async (event) => {
   event.preventDefault();
-  if (nomeProjeto.value.trim() == "" ||imagemPrincipal.src == "../img/imagem1.png" || descricaoProjeto.value.trim() == "") {
-    alert("Preencha todos os dados")
+  if (nomeProjeto.value.trim() == "" || document.querySelector(".projeto__arquivo") == null || descricaoProjeto.value.trim() == "") {
+    alert("Preencha todos os dados");
   } else {
     const projeto = {
       nome: nomeProjeto.value,
