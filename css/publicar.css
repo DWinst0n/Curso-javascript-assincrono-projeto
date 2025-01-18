@@ -137,7 +137,9 @@ body {
 .lista__tags {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.5rem;
+    align-self: center;
 }
 .publicar__projeto__botoes__container {
     margin-top: 2.5rem;

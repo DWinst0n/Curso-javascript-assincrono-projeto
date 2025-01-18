@@ -115,6 +115,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     line-height: 150%;
     transition: padding 0.5s;
     user-select: none;
+    align-self: flex-start;
 }
 .lista__tags__item img {
     position: absolute;
